@@ -1,8 +1,10 @@
 # filter.py
 import xml.etree.ElementTree as ET
+from typing import List, Dict
 from utils import is_non_academic
 
-def extract_paper_info(xml_data):
+def extract_paper_info(xml_data: str) -> List[Dict]:
+    """Extract paper info and return a list of dictionaries for CSV output."""
     root = ET.fromstring(xml_data)
     papers = []
 
