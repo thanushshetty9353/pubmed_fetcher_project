@@ -3,6 +3,7 @@ name = "pubmed_fetcher_thanush"
 version = "0.1.0"
 description = "Fetches PubMed papers with non-academic authors"
 authors = ["Thanush Shetty <thanushshetty7@gmail.com>"]
+packages = [{ include = "pubmed_fetcher_thanush" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -10,8 +11,7 @@ requests = "^2.31.0"
 pandas = "^2.2.2"
 
 [tool.poetry.scripts]
-get-papers-list = "pubmed_fetcher.main:main"
-
+get-papers-list = "pubmed_fetcher_thanush.main:main"
 
 [build-system]
 requires = ["poetry-core"]

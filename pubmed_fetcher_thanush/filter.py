@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 from typing import List, Dict
-from pubmed_fetcher.utils import is_non_academic
+from pubmed_fetcher_thanush.utils import is_non_academic
+
 
 def extract_paper_info(xml_data: str) -> List[Dict]:
     root = ET.fromstring(xml_data)

@@ -1,8 +1,8 @@
 import argparse
 import csv
 from typing import List, Dict
-from pubmed_fetcher.fetcher import fetch_pubmed_ids, fetch_paper_details
-from pubmed_fetcher.filter import extract_paper_info
+from pubmed_fetcher_thanush.fetcher import fetch_pubmed_ids, fetch_paper_details
+from pubmed_fetcher_thanush.filter import extract_paper_info
 
 def save_to_csv(papers: List[Dict], filename: str = "output.csv") -> None:
     """Save filtered paper data to a CSV file."""
