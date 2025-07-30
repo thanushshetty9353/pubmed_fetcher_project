@@ -1,4 +1,3 @@
-# main.py
 import argparse
 import csv
 from typing import List, Dict
@@ -23,13 +22,17 @@ def main() -> None:
     parser.add_argument("query", help="Search query for PubMed")
     parser.add_argument("-f", "--file", help="Filename to save CSV output", default="output.csv")
     parser.add_argument("-d", "--debug", help="Print debug information", action="store_true")
+    parser.add_argument("-m", "--max", help="Maximum number of papers to fetch", type=int, default=100)
+
     args = parser.parse_args()
 
     if args.debug:
         print(f"[DEBUG] Query: {args.query}")
         print(f"[DEBUG] Output file: {args.file}")
+        print(f"[DEBUG] Max results: {args.max}")
 
-    ids = fetch_pubmed_ids(args.query)
+    ids = fetch_pubmed_ids(args.query, args.max)
+
     if args.debug:
         print(f"[DEBUG] Found {len(ids)} PubMed IDs")
 

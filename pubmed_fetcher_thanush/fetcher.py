@@ -1,15 +1,14 @@
-# fetcher.py
 import requests
 from typing import List
 
-def fetch_pubmed_ids(query: str) -> List[str]:
+def fetch_pubmed_ids(query: str, max_results: int = 100) -> List[str]:
     """Fetch PubMed IDs based on the search query."""
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
     params = {
         "db": "pubmed",
         "term": query,
         "retmode": "json",
-        "retmax": 100
+        "retmax": max_results
     }
     try:
         response = requests.get(url, params=params)

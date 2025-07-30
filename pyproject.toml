@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pubmed-fetcher"
+name = "pubmed_fetcher_thanush"
 version = "0.1.0"
 description = "Fetches PubMed papers with non-academic authors"
 authors = ["Thanush Shetty <thanushshetty7@gmail.com>"]
