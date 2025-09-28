@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 from typing import List, Dict
-from pubmed_fetcher_thanush.utils import is_non_academic
+from .utils import is_non_academic
 
 
 def extract_paper_info(xml_data: str) -> List[Dict]:
